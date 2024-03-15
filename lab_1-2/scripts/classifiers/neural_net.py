@@ -113,7 +113,7 @@ class TwoLayerNet(object):
         loss = -np.log(scores[row_index, y] / prob_sum).sum() / N
         
         # Добавляем регуляризацию к потерям
-        loss += 0.5 * reg * (np.sum(W1 * W1) + np.sum(W2 * W2))
+        loss += reg * (np.sum(W1 * W1) + np.sum(W2 * W2))
         
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
